@@ -6,16 +6,15 @@
 }
 
 body {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom right, rgb(9, 65, 87), rgb(8, 119, 163));
 }
 
 .card {
+    position: relative;
     width: 350px;
     height: 400px;
     background-color: #FFF;
@@ -50,4 +49,45 @@ body {
     margin-left: 15px;
     font-size: 400;
     color: #999;
+}
+
+.nav {
+    position: relative;
+    top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.nav li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1em;
+    transition: color 0.25s;
+}
+
+.nav li a:hover {
+    color: #36B3FF;
+}
+
+.toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #36B3FF;
+    border-end-end-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle * {
+    color: #FFF;
+    font-size: 1.4em;
 }
