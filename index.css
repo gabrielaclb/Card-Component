@@ -16,11 +16,17 @@ body {
 .card {
     position: relative;
     width: 350px;
-    height: 400px;
+    height: 120px;
+    overflow: hidden;
     background-color: #FFF;
     border-radius: 10px;
     box-shadow: 0 50px 50px rgba(0, 0, 0, .2);
     padding: 20px;
+    transition: height 0.5s ease-in-out;
+}
+
+.card.active {
+    height: 400px;
 }
 
 .card .content {
@@ -47,7 +53,11 @@ body {
 
 .card .content h2 {
     margin-left: 15px;
-    font-size: 400;
+    font-size: 1.3rem;
+}
+
+.card .content h2 span {
+    font-weight: 400;
     color: #999;
 }
 
@@ -90,4 +100,9 @@ body {
 .toggle * {
     color: #FFF;
     font-size: 1.4em;
+    transition: transform ease-in-out 0.5s;
+}
+
+.card.active .toggle * {
+    transform: rotate(-180deg);
 }
